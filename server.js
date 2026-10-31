@@ -59,3 +59,4 @@ server.listen(PORT, "0.0.0.0", () => {
   console.log(`📂 Serving directory: ${ROOT}`);
   console.log(`Press Ctrl+C to stop the server.`);
   console.log(`=======================================================`);
+  });
