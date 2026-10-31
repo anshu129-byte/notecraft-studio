@@ -1,0 +1,509 @@
+/* ==========================================================================
+   NoteCraft Studio - Stylish & Attractive Notes Generator Styles
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --primary-accent: #6366f1;
+  --bg-app: #0f172a;
+  --panel-bg: rgba(30, 41, 59, 0.7);
+  --paper-bg: #ffffff;
+  --paper-text: #1e293b;
+  --paper-border: #e2e8f0;
+  --paper-heading: #0f172a;
+  --paper-subtext: #64748b;
+  --callout-key-bg: #f5f3ff;
+  --callout-key-border: #8b5cf6;
+  --callout-tip-bg: #ecfdf5;
+  --callout-tip-border: #10b981;
+  --callout-warn-bg: #fff1f2;
+  --callout-warn-border: #f43f5e;
+  --callout-trick-bg: #eff6ff;
+  --callout-trick-border: #3b82f6;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.7);
+}
+
+/* Paper Background Textures */
+.paper-dots {
+  background-image: radial-gradient(#cbd5e1 1.2px, transparent 1.2px);
+  background-size: 20px 20px;
+}
+
+.paper-lines {
+  background-image: repeating-linear-gradient(transparent, transparent 27px, #e2e8f0 28px);
+  background-size: 100% 28px;
+}
+
+.paper-grid {
+  background-image: linear-gradient(to right, #f1f5f9 1px, transparent 1px),
+                    linear-gradient(to bottom, #f1f5f9 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.paper-blank {
+  background-image: none;
+}
+
+/* Themes */
+/* 1. Pastel Academic */
+.theme-pastel {
+  --paper-bg: #ffffff;
+  --paper-text: #334155;
+  --paper-border: #ede9fe;
+  --paper-heading: #1e1b4b;
+  --paper-subtext: #6b7280;
+  --callout-key-bg: #f5f3ff;
+  --callout-key-border: #8b5cf6;
+  --callout-tip-bg: #f0fdf4;
+  --callout-tip-border: #22c55e;
+  --callout-warn-bg: #fff1f2;
+  --callout-warn-border: #f43f5e;
+  --callout-trick-bg: #fdf2f8;
+  --callout-trick-border: #ec4899;
+}
+
+/* 2. Modern Notion */
+.theme-notion {
+  --paper-bg: #ffffff;
+  --paper-text: #262626;
+  --paper-border: #e5e5e5;
+  --paper-heading: #171717;
+  --paper-subtext: #737373;
+  --callout-key-bg: #fafafa;
+  --callout-key-border: #525252;
+  --callout-tip-bg: #fafaf9;
+  --callout-tip-border: #44403c;
+  --callout-warn-bg: #fef2f2;
+  --callout-warn-border: #dc2626;
+  --callout-trick-bg: #f0f9ff;
+  --callout-trick-border: #0284c7;
+}
+
+/* 3. Cyberpunk Dark Dev */
+.theme-cyberpunk {
+  --paper-bg: #090d16;
+  --paper-text: #cbd5e1;
+  --paper-border: #1e293b;
+  --paper-heading: #38bdf8;
+  --paper-subtext: #94a3b8;
+  --callout-key-bg: #1e1b4b;
+  --callout-key-border: #a855f7;
+  --callout-tip-bg: #064e3b;
+  --callout-tip-border: #10b981;
+  --callout-warn-bg: #4c0519;
+  --callout-warn-border: #f43f5e;
+  --callout-trick-bg: #082f49;
+  --callout-trick-border: #38bdf8;
+}
+
+.theme-cyberpunk .paper-dots {
+  background-image: radial-gradient(#1e293b 1.5px, transparent 1.5px);
+}
+.theme-cyberpunk .paper-lines {
+  background-image: repeating-linear-gradient(transparent, transparent 27px, #1e293b 28px);
+}
+.theme-cyberpunk .paper-grid {
+  background-image: linear-gradient(to right, #1e293b 1px, transparent 1px),
+                    linear-gradient(to bottom, #1e293b 1px, transparent 1px);
+}
+
+/* 4. Warm Parchment Vintage */
+.theme-parchment {
+  --paper-bg: #fbf7ee;
+  --paper-text: #3e2e1e;
+  --paper-border: #e8dcc4;
+  --paper-heading: #261b11;
+  --paper-subtext: #786653;
+  --callout-key-bg: #f5eedb;
+  --callout-key-border: #b45309;
+  --callout-tip-bg: #eef4e8;
+  --callout-tip-border: #4d7c0f;
+  --callout-warn-bg: #fae8e8;
+  --callout-warn-border: #b91c1c;
+  --callout-trick-bg: #e8eff5;
+  --callout-trick-border: #1d4ed8;
+}
+
+/* 5. Aurora Glass */
+.theme-aurora {
+  --paper-bg: #ffffff;
+  --paper-text: #1e293b;
+  --paper-border: rgba(226, 232, 240, 0.8);
+  --paper-heading: #0f172a;
+  --paper-subtext: #475569;
+  --callout-key-bg: linear-gradient(135deg, rgba(238, 242, 255, 0.8), rgba(245, 243, 255, 0.8));
+  --callout-key-border: #6366f1;
+  --callout-tip-bg: linear-gradient(135deg, rgba(236, 253, 245, 0.8), rgba(240, 253, 250, 0.8));
+  --callout-tip-border: #14b8a6;
+  --callout-warn-bg: linear-gradient(135deg, rgba(255, 241, 242, 0.8), rgba(254, 242, 242, 0.8));
+  --callout-warn-border: #f43f5e;
+  --callout-trick-bg: linear-gradient(135deg, rgba(240, 249, 255, 0.8), rgba(238, 242, 255, 0.8));
+  --callout-trick-border: #0ea5e9;
+}
+
+/* 6. Botanical Sage */
+.theme-sage {
+  --paper-bg: #f7f9f7;
+  --paper-text: #283618;
+  --paper-border: #dde5b6;
+  --paper-heading: #1b2612;
+  --paper-subtext: #606c38;
+  --callout-key-bg: #edf3e8;
+  --callout-key-border: #588157;
+  --callout-tip-bg: #f0f7f2;
+  --callout-tip-border: #3a5a40;
+  --callout-warn-bg: #fcf1f0;
+  --callout-warn-border: #bc4749;
+  --callout-trick-bg: #eaf4f4;
+  --callout-trick-border: #6b9080;
+}
+
+/* Font Classes */
+.font-sans-mode {
+  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
+}
+.font-serif-mode {
+  font-family: 'Merriweather', Georgia, serif;
+}
+.font-mono-mode {
+  font-family: 'JetBrains Mono', monospace;
+}
+.font-hand-mode {
+  font-family: 'Caveat', cursive;
+  font-size: 1.15em;
+}
+
+/* Note Render Content Styling */
+.note-canvas {
+  background-color: var(--paper-bg);
+  color: var(--paper-text);
+  border-color: var(--paper-border);
+  transition: all 0.25s ease-in-out;
+}
+
+.note-canvas h1,
+.note-canvas h2,
+.note-canvas h3,
+.note-canvas h4 {
+  color: var(--paper-heading);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.note-canvas h1 {
+  font-size: 2.15rem;
+  line-height: 1.2;
+  margin-bottom: 0.35rem;
+  font-family: 'Outfit', sans-serif;
+}
+
+.note-canvas h2 {
+  font-size: 1.45rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--paper-border);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.note-canvas h3 {
+  font-size: 1.15rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.note-canvas p {
+  margin-bottom: 0.95rem;
+  line-height: 1.65;
+}
+
+.note-canvas hr {
+  border: 0;
+  height: 1px;
+  background: var(--paper-border);
+  margin: 1.5rem 0;
+}
+
+/* Stylish Callout Boxes */
+.callout-box {
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin: 1.2rem 0;
+  border-left: 5px solid;
+  box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.callout-box .callout-header {
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.callout-box.callout-key {
+  background-color: var(--callout-key-bg);
+  border-color: var(--callout-key-border);
+  color: var(--paper-text);
+}
+.callout-box.callout-key .callout-header {
+  color: var(--callout-key-border);
+}
+
+.callout-box.callout-tip {
+  background-color: var(--callout-tip-bg);
+  border-color: var(--callout-tip-border);
+  color: var(--paper-text);
+}
+.callout-box.callout-tip .callout-header {
+  color: var(--callout-tip-border);
+}
+
+.callout-box.callout-warn {
+  background-color: var(--callout-warn-bg);
+  border-color: var(--callout-warn-border);
+  color: var(--paper-text);
+}
+.callout-box.callout-warn .callout-header {
+  color: var(--callout-warn-border);
+}
+
+.callout-box.callout-trick {
+  background-color: var(--callout-trick-bg);
+  border-color: var(--callout-trick-border);
+  color: var(--paper-text);
+}
+.callout-box.callout-trick .callout-header {
+  color: var(--callout-trick-border);
+}
+
+.callout-box.callout-note {
+  background-color: var(--paper-bg);
+  border-color: var(--paper-subtext);
+  border: 1px solid var(--paper-border);
+  border-left: 5px solid var(--paper-subtext);
+}
+
+/* Tables */
+.note-canvas table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1.25rem 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--paper-border);
+  font-size: 0.92rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+}
+
+.note-canvas th {
+  background-color: rgba(99, 102, 241, 0.08);
+  color: var(--paper-heading);
+  padding: 0.65rem 0.85rem;
+  font-weight: 700;
+  border-bottom: 2px solid var(--paper-border);
+  text-align: left;
+}
+
+.note-canvas td {
+  padding: 0.6rem 0.85rem;
+  border-bottom: 1px solid var(--paper-border);
+  vertical-align: middle;
+}
+
+.note-canvas tr:last-child td {
+  border-bottom: none;
+}
+
+.note-canvas tr:hover td {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Code & Pre */
+.note-canvas pre {
+  background-color: #0f172a;
+  color: #f8fafc;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  overflow-x: auto;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.88rem;
+  margin: 1rem 0;
+  border: 1px solid #1e293b;
+  position: relative;
+}
+
+.note-canvas code {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: rgba(99, 102, 241, 0.1);
+  color: #4f46e5;
+  padding: 0.15rem 0.4rem;
+  border-radius: 5px;
+  font-size: 0.88em;
+  font-weight: 500;
+}
+
+.theme-cyberpunk .note-canvas code {
+  color: #38bdf8;
+  background-color: rgba(56, 189, 248, 0.15);
+}
+
+.note-canvas pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+/* Practice Accordion Cards */
+.practice-card {
+  border: 1px solid var(--paper-border);
+  border-radius: 12px;
+  margin: 0.85rem 0;
+  overflow: hidden;
+  box-shadow: 0 2px 6px -1px rgba(0,0,0,0.04);
+  background: var(--paper-bg);
+  transition: all 0.2s ease;
+}
+
+.practice-card:hover {
+  border-color: var(--primary-accent);
+}
+
+.practice-question {
+  padding: 0.9rem 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.015);
+}
+
+.practice-answer {
+  padding: 0.9rem 1.2rem;
+  border-top: 1px dashed var(--paper-border);
+  background-color: rgba(99, 102, 241, 0.03);
+  font-size: 0.94rem;
+  display: none;
+}
+
+.practice-card.open .practice-answer {
+  display: block;
+}
+
+.practice-card.open .practice-icon {
+  transform: rotate(180deg);
+}
+
+/* Fluorescent Highlighter Markers */
+.hl-yellow {
+  background: linear-gradient(120deg, rgba(254, 240, 138, 0.7) 0%, rgba(253, 224, 71, 0.8) 100%);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+}
+.hl-mint {
+  background: linear-gradient(120deg, rgba(167, 243, 208, 0.7) 0%, rgba(110, 231, 183, 0.8) 100%);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+}
+.hl-lavender {
+  background: linear-gradient(120deg, rgba(233, 213, 255, 0.7) 0%, rgba(216, 180, 254, 0.8) 100%);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+}
+.hl-coral {
+  background: linear-gradient(120deg, rgba(254, 205, 211, 0.7) 0%, rgba(253, 164, 175, 0.8) 100%);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+}
+
+/* Checklist items */
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin: 0.4rem 0;
+  list-style: none;
+}
+
+/* Cornell Note Layout */
+.layout-cornell {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 1.5rem;
+  border-top: 2px solid var(--paper-border);
+  padding-top: 1rem;
+}
+
+.cornell-cue-column {
+  border-right: 2px solid var(--paper-border);
+  padding-right: 1.25rem;
+  font-size: 0.88rem;
+  color: var(--paper-subtext);
+}
+
+.cornell-notes-column {
+  min-width: 0;
+}
+
+.cornell-summary-box {
+  grid-column: span 2;
+  border-top: 2px solid var(--paper-border);
+  padding-top: 1rem;
+  margin-top: 1.5rem;
+  background: rgba(0, 0, 0, 0.015);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+/* Print / PDF Export Optimization */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .note-canvas {
+    box-shadow: none !important;
+    border: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .practice-answer {
+    display: block !important;
+  }
+  @page {
+    size: A4 portrait;
+    margin: 1.5cm 1.5cm 1.5cm 1.5cm;
+  }
+}
+

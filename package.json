@@ -1,0 +1,18 @@
+
+{
+  "name": "stylish-notes-generator",
+  "version": "1.0.0",
+  "description": "NoteCraft Studio - Stylish Notes Generator",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "notes",
+    "stylish-notes",
+    "katex",
+    "cornell-notes"
+  ],
+  "author": "",
+  "license": "MIT"
+}
